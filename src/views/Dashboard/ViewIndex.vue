@@ -19,7 +19,6 @@ onMounted(() => getTrend());
         v-if="backgroundImage !== ''"
         :key="backgroundImage"
         class="absolute z-0 w-full h-full opacity-30 transition-all duration-700 bg-cover bg-color-black"
-        :src="backgroundImage"
         :style="{
           backgroundImage: 'url(' + backgroundImage + ')',
         }"

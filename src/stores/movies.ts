@@ -3,9 +3,6 @@ import axios from "axios";
 import { TMovieData } from "@/types/movies";
 import { LOCALSTORAGE_MOVIES_FAVORITES } from "@/app.storages";
 
-const movieDbURL = "https://api.themoviedb.org/3/";
-const apiKey = import.meta.env.VITE_DBMOVIE_API_KEY;
-
 export const useMoviesStore = defineStore({
   id: "movies",
 

@@ -1,19 +1,16 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from "vue";
+import { ref, computed } from "vue";
 import { useMoviesStore } from "@/stores/movies";
 import { BaseCard, MovieCard } from "@/app.organizer";
 import useMoviesTrend from "@/composables/useMoviesTrend";
 
 const backgroundImage = ref("");
 const moviesStore = useMoviesStore();
-const { movies, loading, getTrend } = useMoviesTrend();
 
 const moviesFavorites = computed(() => moviesStore.favorites);
 const updateBackgroundImage = (imagePath: string) => {
   backgroundImage.value = imagePath;
 };
-
-onMounted(() => getTrend());
 </script>
 
 <template>
@@ -23,7 +20,6 @@ onMounted(() => getTrend());
         v-if="backgroundImage !== ''"
         :key="backgroundImage"
         class="absolute z-0 w-full h-full opacity-30 transition-all duration-700 bg-cover bg-color-black"
-        :src="backgroundImage"
         :style="{
           backgroundImage: 'url(' + backgroundImage + ')',
         }"
