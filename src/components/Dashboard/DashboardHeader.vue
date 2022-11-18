@@ -81,7 +81,7 @@ watch(currentRouteName, () => {
           >
             <li>
               <router-link :to="{ name: ROUTE_DASHBOARD.name }">
-                <div
+                <span
                   :class="
                     currentRouteName === ROUTE_DASHBOARD.name
                       ? 'dark:text-white light:text-black'
@@ -90,12 +90,12 @@ watch(currentRouteName, () => {
                   class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Accueil
-                </div>
+                </span>
               </router-link>
             </li>
             <li>
               <router-link :to="{ name: ROUTE_DASHBOARD_MOVIES_LIST.name }">
-                <div
+                <span
                   :class="
                     currentRouteName === ROUTE_DASHBOARD_MOVIES_LIST.name
                       ? 'dark:text-white light:text-black'
@@ -104,14 +104,14 @@ watch(currentRouteName, () => {
                   class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Liste
-                </div>
+                </span>
               </router-link>
             </li>
             <li>
               <router-link
                 :to="{ name: ROUTE_DASHBOARD_MOVIES_FAVORITES.name }"
               >
-                <div
+                <span
                   :class="
                     currentRouteName === ROUTE_DASHBOARD_MOVIES_FAVORITES.name
                       ? 'dark:text-white light:text-black'
@@ -120,7 +120,7 @@ watch(currentRouteName, () => {
                   class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Favoris
-                </div>
+                </span>
               </router-link>
             </li>
           </ul>
