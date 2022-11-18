@@ -60,7 +60,7 @@ onMounted(() => {
     </div>
     <div class="bottom z-20">
       <span
-        class="title inline-block p-1 text-white border-2 font-bold rounded border-zinc-400"
+        class="title inline-block p-1 bg-white dark:bg-black text-black dark:text-white border-2 border-transparent font-bold rounded"
       >
         {{ props.data.original_title }}
       </span>
@@ -88,8 +88,7 @@ onMounted(() => {
     }
     .bottom {
       .title {
-        background-color: white;
-        color: black;
+        border-color: grey;
       }
     }
   }
